@@ -3,6 +3,10 @@ require('./database'); // sets up DB and tables
 const express = require('express');
 const app = express();
 
+app.get('/', (req, res) => {
+  res.send('Toddle Backend is running!');
+});
+
 app.use(express.json());
 
 const authRoutes = require('./routes/auth'); // Make sure this file exists and path is correct
